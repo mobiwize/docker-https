@@ -1,0 +1,10 @@
+nginx:
+  image: nginx
+  volumes:
+    - ./htroot:/usr/share/nginx/html:ro
+    - ./conf.d:/etc/nginx/conf.d:ro
+    - ./certs:/etc/nginx/certs:ro
+  ports:
+    - "443:443"
+
+
